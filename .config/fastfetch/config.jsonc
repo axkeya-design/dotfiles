@@ -1,0 +1,120 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "padding": {
+            "top": 1,
+            "left": 1
+        },
+        "color": {
+            "1": "blue",
+            "2": "blue"
+        }
+    },
+    "display": {
+        "separator": " • ",
+        "key": {
+            "width": 16
+        },
+        "color": {
+            "title": "blue"
+        }
+    },
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "format": "\u001b[34m[ \u001b[1m{1}\u001b[0m\u001b[38;2;0;168;255m@\u001b[0m\u001b[1m{2} \u001b[0m\u001b[34m]"
+        },
+        {
+            "type": "custom",
+            "format": "╭──────────────────────────────────────────────╮",
+            "outputColor": "blue"
+        },
+        {
+            "type": "os",
+            "key": "   OS",
+            "keyColor": "\u001b[38;2;0;240;255m",
+            "format": "{3} {12}"
+        },
+        {
+            "type": "kernel",
+            "key": "  󰅚 Kernel",
+            "keyColor": "\u001b[38;2;0;240;255m"
+        },
+        {
+            "type": "uptime",
+            "key": "  󱎫 Uptime",
+            "keyColor": "\u001b[38;2;0;240;255m"
+        },
+        {
+            "type": "wm",
+            "key": "   WM",
+            "keyColor": "\u001b[38;2;0;168;255m"
+        },
+        {
+			"type": "command",
+			"key": "  󰓃 Audio",
+			"keyColor": "\u001b[38;2;0;168;255m",
+			"text": "pactl info | grep -oP 'Server Name: \\K.*'"
+        },
+        {
+            "type": "terminal",
+            "key": "   Term",
+            "keyColor": "\u001b[38;2;0;168;255m"
+        },
+        {
+            "type": "shell",
+            "key": "  󰞷 Shell",
+            "keyColor": "\u001b[38;2;0;168;255m"
+        },
+        {
+            "type": "cpu",
+            "key": "  󰻠 CPU",
+            "keyColor": "\u001b[38;2;0;85;255m",
+            "format": "{1}"
+        },
+        {
+            "type": "gpu",
+            "key": "  󰢮 GPU",
+            "keyColor": "\u001b[38;2;0;85;255m",
+            "format": "{2}"
+        },
+        {
+            "type": "memory",
+            "key": "  󰍛 RAM",
+            "keyColor": "\u001b[38;2;0;85;255m"
+        },
+        {
+            "type": "disk",
+            "key": "  󰋊 SSD",
+            "keyColor": "\u001b[38;2;0;85;255m",
+            "folders": "/",
+            "format": "{1} / {2} ({9})"
+        },
+        {
+            "type": "disk",
+            "key": "  󰋊 HDD",
+            "keyColor": "\u001b[38;2;0;85;255m",
+            "folders": "/mnt/my_disk",
+            "format": "{1} / {2} ({9})"
+        },
+        {
+            "type": "custom",
+            "format": "╰──────────────────────────────────────────────╯",
+            "outputColor": "blue"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[34m[ \u001b[0mPalette \u001b[34m]",
+            "outputColor": "blue"
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle"
+        },
+        "break",
+		"break"
+    ]
+}
+

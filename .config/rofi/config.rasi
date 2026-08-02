@@ -1,0 +1,12 @@
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+	modi: "drun,calc,ssh";
+    drun-display-format: "{name}";
+	terminal: "kitty";
+	ssh-client: "ssh";
+	kb-mode-next: "Shift+Right";
+    kb-mode-previous: "Shift+Left";
+}
+
+@theme "~/.config/rofi/themes/cool_neon.rasi"

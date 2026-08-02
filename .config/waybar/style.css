@@ -1,0 +1,171 @@
+* {
+    font-family: "JetBrainsMono NF", FontAwesome, Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: transparent; 
+    color: #c0caf5; 
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-language,
+#tray,
+#mode,
+#scratchpad {
+    padding: 0 12px;
+    margin: 4px 3px;
+    background-color: rgba(15, 17, 26, 0.87); 
+    border: 1px solid rgba(122, 162, 247, 0.25); 
+    border-radius: 6px; 
+    color: #7aa2f7; 
+}
+
+#workspaces {
+    margin: 0 4px;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#battery:hover,
+#custom-language:hover {
+    background-color: #2f354f; 
+    border-color: #7aa2f7; 
+}
+
+#pulseaudio {
+    color: #7aa2f7; 
+}
+
+#pulseaudio.muted {
+    color: #565f89; 
+    background-color: rgba(15, 17, 26, 0.87);
+}
+
+#network {
+    color: #7aa2f7; 
+}
+
+#network.disconnected {
+	color: #f7768e;
+	background-color: rgba(15, 17, 26, 0.87);
+	border-color: rgba(122, 162, 247, 0.25);
+}
+
+#cpu {
+    color: #7aa2f7; 
+}
+
+#memory {
+    color: #7aa2f7; 
+}
+
+#temperature {
+    color: #7aa2f7; 
+}
+
+#temperature.critical {
+    color: #f7768e;
+    background-color: rgba(247, 118, 142, 0.2);
+    border-color: #f7768e;
+}
+
+#backlight {
+    color: #7aa2f7;
+}
+
+#battery {
+    color: #7aa2f7; 
+}
+
+#custom-language {
+    color: #7aa2f7;
+    min-width: 35px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #7aa2f7;
+}
+
+@keyframes blink {
+    to {
+        background-color: #f7768e; 
+        color: #151825; 
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #f7768e;
+    background-color: rgba(247, 118, 142, 0.2);
+    border-color: #f7768e;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#clock {
+    color: #7aa2f7; 
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+#tray > widget > button {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #7aa2f7;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #565f89; 
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: #2f354f;
+    color: #c0caf5;
+}
+
+#workspaces button.focused, 
+#workspaces button.active {
+    background-color: #2f354f;
+    color: #7aa2f7; 
+    border-bottom: 2px solid #7aa2f7; 
+}
+
+#workspaces button.urgent {
+    background-color: #f7768e;
+    color: #151825;
+}

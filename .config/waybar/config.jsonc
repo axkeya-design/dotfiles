@@ -1,0 +1,104 @@
+{
+    "height": 30, 
+    "spacing": 4, 
+    
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap"
+    ],
+    "modules-center": [], 
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "battery",
+        "custom/language", 
+        "clock",
+        "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+
+    "memory": {
+        "format": "{used:0.1f}Gb/{total:0.1f}Gb "
+    },
+
+    "custom/language": {
+        "exec": "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .active_keymap' | cut -c1-2 | tr 'a-z' 'A-Z'",
+        "format": " {}", 
+        "interval": 1,     
+        "tooltip": false
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-critical": "{temperatureC}°C ",
+        "format-icons": ["", ""]
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󱐋",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["󰂎", "󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    },
+    
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) 󰖩",
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        "tooltip-format": "{ifname} via {gwaddr} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰌷",
+        "format-disconnected": "Disconnected 󰪎",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },    
+    
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰋎 ",
+            "headset": "󰋋 ",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }, 
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 12 
+    }
+}

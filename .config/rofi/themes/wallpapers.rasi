@@ -1,0 +1,117 @@
+* {
+    bg:           #0f111add;  
+    bg-light:     #151825ff;  
+    border-color: #3b4261ff;  
+    accent:       #00f5d4ff;  
+    fg:           #c0caf5ff;  
+    fg-dim:       #565f89ff;  
+    selected-bg:  #24283b88;  
+
+    font: "JetBrains Mono Nerd Font 10";
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;    
+    border-radius: 12px;
+    width: 850px;             
+    height: 500px;            
+    padding: 25px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, splitbox ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: #1a1b26;
+    expand: false;
+    border: 1px;
+    border-radius: 8px;
+    border-color: #3b4261;
+    margin: 0px 0px 15px 0px;
+    padding: 8px 12px;
+}
+
+prompt {
+    background-color: #7aa2f7;
+    text-color: #1a1b26;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font: "JetBrains Mono Nerd Font Bold 10";
+}
+
+entry {
+    placeholder: "Search wallpapers...";
+    placeholder-color: @fg-dim;
+    text-color: @fg;
+    padding: 4px 8px;
+}
+
+splitbox {
+    orientation: horizontal;
+    background-color: transparent;
+    children: [ listview, preview-box ];
+}
+
+listview {
+    background-color: transparent;
+    width: 400px;
+    columns: 1;
+    spacing: 4px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    fixed-height: true;
+}
+
+element {
+    orientation: horizontal;
+    children: [ element-text ];
+    padding: 8px 12px;
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: @fg;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @selected-bg;
+    text-color: @accent;
+    border: 0px 0px 0px 4px;   
+    border-color: @accent;
+    border-radius: 6px;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+preview-box {
+    width: 400px;
+    margin: 0px 0px 0px 20px;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 10px;
+    background-color: #05070f;
+    children: [ icon-current-entry ];
+}
+
+icon-current-entry {
+    size: 380px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    expand: true;
+}
