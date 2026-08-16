@@ -1,7 +1,7 @@
 #!/bin/bash
 
 THEME_DIR="$HOME/.config/rofi/themes"
-CONFIG_FILE="$HOME/.config/rofi/config.rasi"
+CONFIG_FILE="$HOME/.dotfiles/.config/rofi/config.rasi"
 
 if [ ! -d "$THEME_DIR" ]; then
     echo "Directory $THEME_DIR not found!"
