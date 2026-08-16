@@ -1,0 +1,15 @@
+set completion-highlight-bg     "#7aa2f7"       
+set completion-highlight-fg     "#1a1b26"       
+
+set completion-bg               "#16161e"       
+set completion-fg               "#a9b1d6"       
+set completion-group-bg         "#1a1b26"       
+set completion-group-fg         "#7aa2f7"       
+
+set inputbar-bg                 "#1a1b26"       
+set inputbar-fg                 "#7aa2f7"       
+
+set highlight-color             "rgba(40, 65, 130, 0.45)"
+set highlight-active-color      "rgba(122, 162, 247, 0.75)"
+
+set highlight-fg                "none"

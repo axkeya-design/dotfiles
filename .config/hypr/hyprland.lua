@@ -37,7 +37,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "thunar"
+local fileManager = "pcmanfm"
 local menu        = "rofi -show drun"
 
 
@@ -51,8 +51,7 @@ local menu        = "rofi -show drun"
 -- Or execute your favorite apps at launch like this:
 --
 -- hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
+--   hl.exec_cmd(terminal) hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 
@@ -405,6 +404,9 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(terminal .. " -e btop"))
 
 -- Music Bind
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("audacious"))
+
+-- Firefox Bind
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("firefox"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
