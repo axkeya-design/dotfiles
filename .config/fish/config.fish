@@ -9,9 +9,10 @@ if status is-interactive
     alias mpv-play="mpv --no-video --really-quiet"
 
     alias yt-dlp-video="yt-dlp -f 'bv+ba/ba' --no-playlist --merge-output-format mp4"
+    alias yt-dlp-video-playlist="yt-dlp -P . -f "bv+ba/b" --merge-output-format mp4"
     alias yt-dlp-audio="yt-dlp -x --audio-format mp3 --audio-quality 0 --embed-thumbnail --no-playlist"
     alias yt-dlp-audio-playlist="yt-dlp -x --audio-format mp3 --audio-quality 0 --embed-thumbnail"
-    alias yt-dlp-playlist="yt-dlp -P . -f "bv+ba/b" --merge-output-format mp4"
+	alias yt-sub='yt-dlp --skip-download --write-subs --write-auto-subs --sub-format srt --sub-lang "ru,en"'
 
     alias icat="kitty +kitten icat"
     alias weather="curl wttr.in"
