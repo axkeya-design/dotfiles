@@ -1,0 +1,81 @@
+* {
+    font:                       "JetBrainsMono Nerd Font 10";
+    bg:                         #0f172a;
+    fg:                         #e2e8f0;
+    accent:                     #00f0ff;
+    selected-bg:                #1e293b;
+    background-color:           transparent;
+    text-color:                 @fg;
+}
+
+window {
+    location:                   south;
+    anchor:                     south;
+    y-offset:                   -15px;
+    width:                      45%;
+    background-color:           @bg;
+    border:                     2px;
+    border-color:               @accent;
+    border-radius:              16px;
+    padding:                    10px;
+    children:                   [ mainbox ];
+}
+
+mainbox {
+    orientation:                vertical;
+    spacing:                    8px;
+    children:                   [ inputbar, listview ];
+}
+
+inputbar {
+    orientation:                horizontal;
+    background-color:           @selected-bg;
+    border-radius:              10px;
+    padding:                    6px 12px;
+    children:                   [ prompt, entry ];
+}
+
+prompt {
+    text-color:                 @accent;
+    margin:                     0px 8px 0px 0px;
+}
+
+entry {
+    placeholder:                "Search...";
+    placeholder-color:          #64748b;
+}
+
+listview {
+    layout:                     horizontal;
+    lines:                      6;
+    spacing:                    8px;
+    cycle:                      true;
+    dynamic:                    true;
+}
+
+element {
+    orientation:                vertical;
+    padding:                    8px 4px;
+    border-radius:              10px;
+    width:                      90px;
+    children:                   [ element-icon, element-text ];
+}
+
+element selected {
+    background-color:           @selected-bg;
+    border:                     1px;
+    border-color:               @accent;
+}
+
+element-icon {
+    size:                       36px;
+    horizontal-align:           0.5;
+}
+
+element-text {
+    horizontal-align:           0.5;
+    vertical-align:             0.5;
+    font:                       "JetBrainsMono Nerd Font 9";
+    wrap:                       false;
+    ellipsis:                   "…";
+}

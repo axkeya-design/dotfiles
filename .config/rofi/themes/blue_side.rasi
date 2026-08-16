@@ -1,12 +1,13 @@
 * {
-    bg:           #0f111add;  
-    bg-light:     #151825ff;  
-    border-color: #7aa2f7ff;  
-    accent:       #00f5d4ff;  
-    fg:           #c0caf5ff;  
-    fg-dim:       #565f89ff;  
-    selected-bg:  #2f354fff;  
-    urgent:       #f7768eff;  
+    bg:               #0f111add;  
+    bg-light:         #151825ff;  
+    border-color:     #3d59a1ff;  
+    accent:           #7aa2f7ff;  
+    accent-glow:      #2ac3deff;  
+    fg:               #c0caf5ff;  
+    fg-dim:           #565f89ff;  
+    selected-bg:      #24283bff;  
+    urgent:           #f7768eff;  
 
     font: "JetBrains Mono Nerd Font 10";
     background-color: transparent;
@@ -16,13 +17,23 @@
 window {
     transparency: "real";
     background-color: @bg;
+    
+    /* Расположение справа */
+    location: east;
+    anchor: east;
+    
+    /* Отступы от краев экрана */
+    x-offset: -16px;   /* Отступ справа */
+    y-offset: 15px;    /* Отступ сверху от бара */
+    
+    width: 320px;
+    
+    /* Скругление со всех сторон и обводка */
     border: 2px;
     border-color: @border-color;
     border-radius: 12px;
-    width: 600px;
-    padding: 15px;
-    location: center;
-    anchor: center;
+    
+    padding: 14px;
 }
 
 mainbox {
@@ -37,15 +48,14 @@ inputbar {
     border: 1px;
     border-radius: 8px;
     border-color: @border-color;
-    margin: 0px 0px 12px 0px;
-    padding: 8px 12px;
+    margin: 0px 0px 10px 0px;
+    padding: 6px 10px;
 }
 
 prompt {
-    background-color: @border-color;
-    text-color: @bg;
-    padding: 4px 10px;
-    border-radius: 6px;
+    background-color: transparent;
+    text-color: @accent;
+    padding: 0px 6px 0px 0px;
     font: "JetBrains Mono Nerd Font Bold 10";
 }
 
@@ -53,29 +63,29 @@ entry {
     placeholder: "Search...";
     placeholder-color: @fg-dim;
     text-color: @fg;
-    padding: 4px;
+    vertical-align: 0.5;
 }
 
 listview {
     background-color: transparent;
     columns: 1;
-    lines: 8;
-    spacing: 6px;
+    lines: 15;        /* Увеличена высота (больше пунктов) */
+    spacing: 4px;
     cycle: true;
     dynamic: true;
     layout: vertical;
 }
 
 element {
-    padding: 8px 12px;
+    padding: 8px 10px;
     background-color: transparent;
     text-color: @fg;
     border-radius: 6px;
 }
 
 element-icon {
-    size: 24px;
-    padding: 0px 12px 0px 0px;
+    size: 20px;
+    padding: 0px 10px 0px 0px;
     background-color: transparent;
 }
 
@@ -87,9 +97,9 @@ element-text {
 
 element selected {
     background-color: @selected-bg;
-    text-color: @accent;
-    border: 0px 0px 0px 4px; 
-    border-color: @accent;
+    text-color: @accent-glow;
+    border: 0px 0px 0px 3px; 
+    border-color: @accent-glow;
 }
 
 element selected.urgent {
@@ -99,10 +109,5 @@ element selected.urgent {
 
 element selected.active {
     background-color: @border-color;
-    text-color: @bg;
+    text-color: @fg;
 }
-
-element alternate.normal {
-    background-color: transparent;
-}
-

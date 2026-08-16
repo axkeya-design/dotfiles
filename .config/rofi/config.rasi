@@ -9,4 +9,4 @@ configuration {
     kb-mode-previous: "Shift+Left";
 }
 
-@theme "~/.config/rofi/themes/cool_neon.rasi"
+@theme "~/.config/rofi/themes/blue_side.rasi"

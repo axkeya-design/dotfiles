@@ -40,7 +40,6 @@ local terminal    = "kitty"
 local fileManager = "pcmanfm"
 local menu        = "rofi -show drun"
 
-
 -------------------
 ---- AUTOSTART ----
 -------------------
@@ -407,6 +406,9 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("audacious"))
 
 -- Firefox Bind
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("firefox"))
+
+-- Rofi Theme Selector
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("~/.config/rofi/scripts/theme-selector.sh"))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
