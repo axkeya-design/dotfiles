@@ -305,7 +305,7 @@ hl.bind(mainMod .. " + G", function()
 	hl.dispatch(hl.dsp.window.center())
 end)
 
-hl.bind(mainMod .. " + Tab", hl.dsp.window.cycle_next())
+hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
@@ -404,8 +404,8 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(terminal .. " -e btop"))
 -- Music Bind
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("audacious"))
 
--- Firefox Bind
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("firefox"))
+-- Waybar Bind
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/waybar/toggle-style.sh"))
 
 -- Rofi Theme Selector
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("~/.config/rofi/scripts/theme-selector.sh"))

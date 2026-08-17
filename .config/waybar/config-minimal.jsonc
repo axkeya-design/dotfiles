@@ -1,0 +1,56 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 6,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 0,
+
+    "modules-left": ["custom/date"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "battery", "pulseaudio"],
+
+    "custom/date": {
+        "exec": "date '+%a %d %b • %H:%M'",
+        "interval": 30,
+        "format": "\uf133 {}",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+
+    "network": {
+        "format-wifi": "\uf1eb  {signalStrength}%",
+        "format-ethernet": "\uf0e8 {ipaddr}",
+        "format-disconnected": "\uf071 offline",
+        "tooltip-format": "{essid} ({signalStrength}%)"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "\uf0e7 {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "\uf6a9 muted",
+        "format-icons": {
+            "default": ["\uf026", "\uf027", "\uf028"]
+        },
+        "on-click": "pavucontrol"
+    }
+}
+
