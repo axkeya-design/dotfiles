@@ -46,11 +46,10 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": "\uf6a9 muted",
+        "format-muted": " muted",
         "format-icons": {
             "default": ["\uf026", "\uf027", "\uf028"]
         },
         "on-click": "pavucontrol"
     }
 }
-
