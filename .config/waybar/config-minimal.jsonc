@@ -21,10 +21,7 @@
     "hyprland/workspaces": {
         "format": "{id}",
         "all-outputs": true,
-        "on-click": "activate",
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5]
-        }
+        "on-click": "activate"
     },
 
     "network": {
