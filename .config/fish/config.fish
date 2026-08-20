@@ -27,8 +27,6 @@ if status is-interactive
     alias ddgr-github="ddgr -w github.com"
     alias ddgr-geekforgeeks="ddgr -w geeksforgeeks.org"
 
-    alias ssh="kitty +kitten ssh"
-
     alias clamscan-full='sudo clamscan -r -i --exclude-dir="^/sys" --exclude-dir="^/proc" --exclude-dir="^/dev" --move=/tmp/quarantine /'
     alias clamscan-full-home='sudo clamscan -r -i --exclude-dir="^/sys" --exclude-dir="^/proc" --exclude-dir="^/dev" --move=/tmp/quarantine ~'
 

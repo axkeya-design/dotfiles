@@ -9,4 +9,4 @@ configuration {
     kb-mode-previous: "Shift+Left";
 }
 
-@theme "/home/axkeya/.config/rofi/themes/dock_panel.rasi"
+@theme "/home/axkeya/.config/rofi/themes/cool_neon.rasi"
