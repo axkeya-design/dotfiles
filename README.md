@@ -45,6 +45,7 @@ Includes a custom Fish function `switch_prompt.fish` that allows you to change s
 ```fish
 switch_prompt <1-3>
 ```
+</details>
 
 ---
 
