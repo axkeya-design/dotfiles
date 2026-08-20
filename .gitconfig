@@ -3,3 +3,9 @@
 	email = axkeya@gmail.com
 [init]
 	defaultBranch = main
+[core]
+	editor = nvim
+[alias]
+    st = status -sb
+	cm = commit -m
+	ps = push

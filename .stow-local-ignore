@@ -1,2 +1,6 @@
-^\.git
-.*\.md
+^\.git$
+^\.gitignore$
+
+^assets$
+
+.*\.md$
