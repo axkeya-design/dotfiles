@@ -30,7 +30,7 @@ Custom Rofi setup featuring custom themes and utility scripts for power control,
 
 ### 💻 Terminal & Shell (Kitty + Fish)
 
-Configured with **Fish shell**, **Fastfetch** system information display, and **CAVA** audio visualizer.
+Customized **Kitty** terminal coupled with a feature-rich **Fish shell** environment
 
 | Kitty Terminal |
 | :--- |
@@ -44,3 +44,14 @@ Includes a custom Fish function `switch_prompt.fish` that allows you to change s
 **Usage:**
 ```fish
 switch_prompt <1-3>
+```
+
+---
+
+### 📊 System Information (Fastfetch)
+
+Custom **Fastfetch** configuration displaying system hardware specs, shell environment, and color palette.
+
+| Fastfetch Overview |
+| :--- |
+| ![Fastfetch Screenshot](./assets/fastfetch.png) |
