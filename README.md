@@ -25,3 +25,7 @@ Custom Rofi setup featuring custom themes and utility scripts for power control,
 | Application Launcher | Power Menu | Wallpaper Menu |
 | :---: | :---: | :---: |
 | ![Rofi Launcher](./assets/rofi-menu.png) | ![Rofi Power Menu](./assets/rofi-powermenu.png) | ![Rofi Wallpaper Menu](./assets/rofi-wallmenu.png) |
+
+---
+
+### 💻 Terminal & Shell (Kitty + Fish)
