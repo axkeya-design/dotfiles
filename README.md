@@ -23,7 +23,5 @@ Includes multiple layouts togglable on the fly via `toggle-style.sh`.
 Custom Rofi setup featuring custom themes and utility scripts for power control, wallpaper management, and device switching.
 
 | Application Launcher | Power Menu | Wallpaper Menu |
-| :---: | :---: |
-| ![Rofi Launcher](./assets/rofi_menu.png) | ![Rofi Power Menu](./assets/rofi_powermenu.png) | ![Rofi Wallpaper Menu](./assets/rofi_wallmenu) |
-
----
+| :---: | :---: | :---: |
+| ![Rofi Launcher](./assets/rofi-menu.png) | ![Rofi Power Menu](./assets/rofi-powermenu.png) | ![Rofi Wallpaper Menu](./assets/rofi-wallmenu.png) |
