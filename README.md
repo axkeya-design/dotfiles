@@ -36,7 +36,7 @@ Configured with **Fish shell**, **Fastfetch** system information display, and **
 | :--- |
 | ![Kitty Terminal](./assets/kitty-terminal.png) |
 
-details>
+<details>
 <summary>💡 Custom Prompt Switcher</summary>
 
 Includes a custom Fish function `switch_prompt.fish` that allows you to change shell prompt layouts on the fly.
