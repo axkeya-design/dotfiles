@@ -29,3 +29,18 @@ Custom Rofi setup featuring custom themes and utility scripts for power control,
 ---
 
 ### 💻 Terminal & Shell (Kitty + Fish)
+
+Configured with **Fish shell**, **Fastfetch** system information display, and **CAVA** audio visualizer.
+
+| Kitty Terminal |
+| :--- |
+| ![Kitty Terminal](./assets/kitty-terminal.png) |
+
+details>
+<summary>💡 Custom Prompt Switcher</summary>
+
+Includes a custom Fish function `switch_prompt.fish` that allows you to change shell prompt layouts on the fly.
+
+**Usage:**
+```fish
+switch_prompt <1-3>
