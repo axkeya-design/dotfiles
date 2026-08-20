@@ -32,6 +32,7 @@ call plug#end()
 nnoremap <C-f> :NERDTreeToggle<CR>
 nnoremap <C-g> :Files<CR>
 nnoremap <C-t> :botright split +terminal<CR>
+nnoremap <C-m> :let &conceallevel = &conceallevel == 0 ? 2 : 0<CR>
 
 tnoremap <Esc> <C-\><C-n><C-w>k
 

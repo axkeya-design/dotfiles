@@ -36,6 +36,7 @@ let g:webdevicons_enable_airline_statusline = 1
 nnoremap <C-f> :NERDTreeToggle<CR>
 nnoremap <C-g> :Files<CR>
 nnoremap <C-t> :botright term<CR>
+nnoremap <C-m> :let &conceallevel = &conceallevel == 0 ? 2 : 0<CR>
 
 if (has("termguicolors"))
   set termguicolors
