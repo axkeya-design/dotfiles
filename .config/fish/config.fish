@@ -32,4 +32,5 @@ if status is-interactive
 
     set -gx EDITOR nvim
     set -gx VISUAL nvim
+	set -gx TERM xterm-256color
 end
