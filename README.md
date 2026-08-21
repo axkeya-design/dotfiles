@@ -77,3 +77,19 @@ Extensible, terminal-based text editor customized for speed, code navigation, an
 | Neovim Workspace |
 | :--- |
 | ![Neovim Setup](./assets/neovim.png) |
+
+---
+
+### 🔤 Fonts Used
+
+Fonts required for proper rendering of text, icons, and color emojis across the system:
+
+* **JetBrains Mono Nerd Font** — Primary monospace font for terminal, code, and UI elements.
+* **Font Awesome** — Vector icons for Waybar, Rofi, and custom scripts.
+* **Noto Color Emoji** — Color emoji support for the terminal and UI elements.
+
+#### 📥 Installation via pacman
+
+```bash
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-font-awesome ttf-noto-emoji
+```
