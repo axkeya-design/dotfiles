@@ -56,3 +56,28 @@ Custom **Fastfetch** configuration displaying system hardware specs, shell envir
 | Fastfetch Overview |
 | :--- |
 | ![Fastfetch Screenshot](./assets/fastfetch.png) |
+
+---
+
+### 📂 File Manager & Audio Visualizer
+
+| Yazi (File Manager) | Cava (Audio Visualizer) |
+| :---: | :---: |
+| ![Yazi Preview](./assets/yazi_and_cava.png) |
+
+<details>
+<summary>💡 Yazi & Cava Setup Details</summary>
+
+* **Yazi:** Fast Async I/O file manager built in Rust with image preview and keybindings matching Vim navigation.
+* **Cava:** Console Audio Visualizer configured to match the system's color palette.
+</details>
+
+---
+
+### 📝 Text Editor (Neovim)
+
+Extensible, terminal-based text editor customized for speed, code navigation, and syntax highlighting.
+
+| Neovim Workspace |
+| :--- |
+| ![Neovim Setup](./assets/neovim.png) |
