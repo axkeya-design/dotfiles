@@ -24,7 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -49,6 +49,6 @@ endif
 
 syntax enable
 set background=dark
-colorscheme catppuccin-mocha
+colorscheme nord
 
 let g:rainbow_active = 1
