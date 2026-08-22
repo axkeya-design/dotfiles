@@ -24,11 +24,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
-Plug 'arcticicestudio/nord-vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
-
 nnoremap <C-f> :NERDTreeToggle<CR>
 nnoremap <C-g> :Files<CR>
 nnoremap <C-t> :botright split +terminal<CR>
@@ -49,6 +48,6 @@ endif
 
 syntax enable
 set background=dark
-colorscheme nord
+colorscheme catppuccin-mocha
 
-let g:rainbow_active = 1
+let g:rainbow_active = 1 
