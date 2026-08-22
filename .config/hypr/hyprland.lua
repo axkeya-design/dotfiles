@@ -410,6 +410,9 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/waybar/toggle-style.sh
 -- Rofi Theme Selector
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("~/.config/rofi/scripts/theme-selector.sh"))
 
+-- Rofimoji Bind
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("rofimoji --selector rofi --clipboarder wl-copy --typer wtype"))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
