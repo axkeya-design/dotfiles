@@ -65,7 +65,7 @@ Custom **Fastfetch** configuration displaying system hardware specs, shell envir
 **Cava:** Console Audio Visualizer configured to match the system's color palette.
 
 | Yazi (File Manager) |
-| :---: | :---: |
+| :---: |
 | ![Yazi Preview](./assets/yazi_and_cava.png) |
 
 ---
