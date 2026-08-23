@@ -15,7 +15,6 @@ if status is-interactive
     alias yt-sub='yt-dlp --skip-download --write-subs --write-auto-subs --sub-format srt --sub-lang "ru,en"'
 
     alias icat="kitty +kitten icat"
-    alias weather="curl wttr.in"
     alias csakura="csakura -c sky"
     alias cbonsai="cbonsai -li -k 4,3,12,11"
     alias pokego="pokego -r 1-8"
@@ -23,12 +22,9 @@ if status is-interactive
     alias clock="tty-clock -c -C 4 -b"
     alias lavat="lavat -c blue"
 
-    alias ddgr-wikipedia="ddgr -w wikipedia.org"
-    alias ddgr-github="ddgr -w github.com"
-    alias ddgr-geekforgeeks="ddgr -w geeksforgeeks.org"
-
-    alias clamscan-full='sudo clamscan -r -i --exclude-dir="^/sys" --exclude-dir="^/proc" --exclude-dir="^/dev" --move=/tmp/quarantine /'
-    alias clamscan-full-home='sudo clamscan -r -i --exclude-dir="^/sys" --exclude-dir="^/proc" --exclude-dir="^/dev" --move=/tmp/quarantine ~'
+	alias clamscan-full='sudo mkdir -p /tmp/quarantine && 
+	sudo clamscan -r -i --exclude-dir="^/sys" --exclude-dir="^/proc" --exclude-dir="^/dev" --move=/tmp/quarantine /'
+	alias clamscan-full-home='sudo mkdir -p /tmp/quarantine; and sudo clamscan -r -i --move=/tmp/quarantine ~'
 
     set -gx EDITOR nvim
     set -gx VISUAL nvim
