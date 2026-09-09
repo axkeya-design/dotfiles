@@ -413,6 +413,9 @@ hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("~/.config/rofi/scripts/theme
 -- Rofimoji Bind
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("rofimoji --selector rofi --clipboarder wl-copy --typer wtype"))
 
+-- Firefox Bind
+hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("firefox"))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
