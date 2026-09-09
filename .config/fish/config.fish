@@ -5,6 +5,8 @@ if status is-interactive
     alias v="vim"
     alias yz="yazi"
 
+	alias s-ddgr="s -b w3m -p duckduckgo"
+
     alias mpv-term="mpv -vo=tct --really-quiet"
     alias mpv-play="mpv --no-video --really-quiet"
 
