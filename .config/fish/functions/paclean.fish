@@ -4,6 +4,10 @@ function paclean
         sudo pacman -Rns --noconfirm $orphans
     end
 
+	if type -q paccache
+        sudo paccache -r
+    end
+
     if type -q yay
         yay -Scc --noconfirm
     else
