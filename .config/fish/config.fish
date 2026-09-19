@@ -26,6 +26,10 @@ if status is-interactive
 	sudo clamscan -r -i --exclude-dir="^/sys" --exclude-dir="^/proc" --exclude-dir="^/dev" --move=/tmp/quarantine /'
 	alias clamscan-full-home='sudo mkdir -p /tmp/quarantine; and sudo clamscan -r -i --move=/tmp/quarantine ~'
 
+	alias pxtor="proxychains -f ~/.config/proxychains/tor.conf"
+	alias pxzap="proxychains -f ~/.config/proxychains/zap.conf"
+	alias pxburp="proxychains -f ~/.config/proxychains/burp.conf"
+
     set -gx EDITOR nvim
     set -gx VISUAL nvim
 	set -gx TERM xterm-256color
