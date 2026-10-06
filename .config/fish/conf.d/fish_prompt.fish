@@ -1,0 +1,1 @@
+/home/axkeya/.config/fish/prompts/fish_blue_line.fish
