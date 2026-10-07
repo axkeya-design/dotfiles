@@ -3,5 +3,6 @@
 ^\.gitconfig$
 
 ^assets$
+^wallpapers$
 
 .*\.md$
