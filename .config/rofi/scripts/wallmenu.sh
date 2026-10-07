@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLPAPER_DIR="$HOME/Pictures/4K_Wallpapers"
+WALLPAPER_DIR="$HOME/.dotfiles/wallpapers"
 CACHE_FILE="/tmp/rofi_wallpaper_list"
 
 if [ ! -d "$WALLPAPER_DIR" ]; then

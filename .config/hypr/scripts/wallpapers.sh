@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALL_DIR="$HOME/Pictures/4K_Wallpapers"
+WALL_DIR="$HOME/.dotfiles/wallpapers"
 
 change_wall() {
     NEXT_WALL=$(find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | shuf -n 1)

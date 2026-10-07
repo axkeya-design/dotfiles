@@ -37,7 +37,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "pcmanfm"
+local fileManager = "thunar"
 local menu        = "rofi -show drun"
 
 -------------------
