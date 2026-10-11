@@ -1,1 +1,1 @@
-/home/axkeya/.config/fish/prompts/fish_blue_line.fish
+/home/axkeya/.config/fish/prompts/fish_two_line.fish
