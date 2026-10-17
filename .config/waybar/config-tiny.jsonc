@@ -18,8 +18,7 @@
         "cpu",
         "memory",
         "pulseaudio",
-        "battery",
-        "tray"
+        "battery"
     ],
 
     "custom/arch": {
@@ -71,10 +70,5 @@
         "format": "󰁹 {capacity}%",
         "format-charging": "󱐋 {capacity}%",
         "format-plugged": " {capacity}%"
-    },
-
-    "tray": {
-        "icon-size": 13,
-        "spacing": 10
     }
 }

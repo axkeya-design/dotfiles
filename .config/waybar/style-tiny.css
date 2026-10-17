@@ -7,14 +7,12 @@
     min-height: 0;
 }
 
-/* Основное окно Waybar */
 window#waybar {
     background-color: rgba(10, 14, 20, 0.82);
     border: 1.5px solid #00d8ff;
     color: #38b6ff;
 }
 
-/* Левая секция (Промпт) */
 #custom-arch {
     color: #00f0ff;
     padding-left: 10px;
@@ -28,7 +26,6 @@ window#waybar {
     padding-right: 10px;
 }
 
-/* Воркспейсы */
 #workspaces button {
     padding: 0 6px;
     color: #4a6978;
@@ -47,19 +44,22 @@ window#waybar {
     color: #38b6ff;
 }
 
-/* Центр (Часы) */
 #clock {
     color: #00f0ff;
     padding: 0 12px;
 }
 
-/* Правая секция (Системные модули) */
-#cpu, #memory, #pulseaudio, #battery {
+#cpu, #memory, #pulseaudio {
     padding: 0 7px;
     color: #38b6ff;
 }
 
-/* Разделительные линии или акценты при предупреждении */
+#battery {
+    padding-left: 7px;
+    padding-right: 10px;
+    color: #38b6ff;
+}
+
 #pulseaudio.muted {
     color: #5c7e8c;
 }
@@ -82,17 +82,4 @@ window#waybar {
         color: #ffffff;
         background-color: #ff0055;
     }
-}
-
-#tray {
-    padding-left: 6px;
-    padding-right: 10px;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
 }
