@@ -459,10 +459,59 @@ hl.window_rule({
 -- overlayLayerRule:set_enabled(false)
 
 -- Hyprland-run windowrule
-hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
 
-    move  = "20 monitor_h-120",
-    float = true,
+-- Workspaces
+
+hl.window_rule({
+    name  = "firefox-workspace",
+    match = { class = "^(firefox)$" },
+    workspace = 2,
+})
+
+hl.window_rule({
+    name  = "telegram-workspace",
+    match = { class = "^(org.telegram.desktop)$" },
+    workspace = 3,
+})
+
+hl.window_rule({
+    name  = "obs-workspace",
+	match = { class = "com.obsproject.Studio" },
+    workspace = 3,
+})
+
+hl.window_rule({
+    name  = "obsidian-workspace",
+	match = { class = "md.obsidian.Obsidian" },
+    workspace = 3,
+})
+
+hl.window_rule({
+    name  = "burpsuite-workspace",
+    match = { class = "burp-StartBurp" },
+    workspace = 4,
+})
+
+hl.window_rule({
+    name  = "zap-workspace",
+	match = { class = "(?i).*zap.*" },
+    workspace = 4,
+})
+
+hl.window_rule({
+    name  = "spotify-workspace",
+	match = { class = "Spotify" },
+    workspace = 5,
+})
+
+hl.window_rule({
+    name  = "steam-workspace",
+    match = { class = "^(steam)$" },
+    workspace = 7,
+})
+
+hl.window_rule({
+    name  = "protonvpn-workspace",
+    match = { class = "proton.vpn.app.gtk" },
+    workspace = 10,
 })
