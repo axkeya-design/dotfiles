@@ -28,20 +28,20 @@ window#waybar {
 
 #workspaces button {
     padding: 0 6px;
-    color: #4a6978;
+    color: #1a73e8; 
     background: transparent;
     border-radius: 4px;
     transition: all 0.2s ease;
 }
 
 #workspaces button.active {
-    color: #00f0ff;
-    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+    color: #2563eb;
+    text-shadow: 0 0 5px rgba(37, 99, 235, 0.6);
 }
 
 #workspaces button:hover {
-    background: rgba(0, 240, 255, 0.12);
-    color: #38b6ff;
+    background: rgba(37, 99, 235, 0.15);
+    color: #3b82f6;
 }
 
 #clock {
