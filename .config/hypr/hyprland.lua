@@ -505,6 +505,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name  = "audacious-workspace",
+	match = { class = "audacious" },
+    workspace = 5,
+})
+
+hl.window_rule({
     name  = "steam-workspace",
     match = { class = "^(steam)$" },
     workspace = 7,
