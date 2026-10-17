@@ -35,8 +35,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #2563eb;
-    text-shadow: 0 0 5px rgba(37, 99, 235, 0.6);
+    color: #00f0ff;
 }
 
 #workspaces button:hover {
