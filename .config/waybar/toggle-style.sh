@@ -11,6 +11,10 @@ if [[ "$CURRENT_CONFIG" == *"config-minimal.jsonc"* ]]; then
     ln -sf config-detailed.jsonc config.jsonc
     ln -sf style-detailed.css style.css
     echo "Switched to detailed"
+elif [[ "$CURRENT_CONFIG" == *"config-detailed.jsonc"* ]]; then
+    ln -sf config-tiny.jsonc config.jsonc
+    ln -sf style-tiny.css style.css
+    echo "Switched to tiny"
 else
     ln -sf config-minimal.jsonc config.jsonc
     ln -sf style-minimal.css style.css

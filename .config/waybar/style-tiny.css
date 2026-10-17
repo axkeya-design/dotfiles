@@ -1,0 +1,98 @@
+* {
+    border: none;
+    border-radius: 8px;
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+/* Основное окно Waybar */
+window#waybar {
+    background-color: rgba(10, 14, 20, 0.82);
+    border: 1.5px solid #00d8ff;
+    color: #38b6ff;
+}
+
+/* Левая секция (Промпт) */
+#custom-arch {
+    color: #00f0ff;
+    padding-left: 10px;
+    padding-right: 6px;
+    font-size: 15px;
+}
+
+#custom-separator {
+    color: #00f0ff;
+    padding-left: 2px;
+    padding-right: 10px;
+}
+
+/* Воркспейсы */
+#workspaces button {
+    padding: 0 6px;
+    color: #4a6978;
+    background: transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #00f0ff;
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+#workspaces button:hover {
+    background: rgba(0, 240, 255, 0.12);
+    color: #38b6ff;
+}
+
+/* Центр (Часы) */
+#clock {
+    color: #00f0ff;
+    padding: 0 12px;
+}
+
+/* Правая секция (Системные модули) */
+#cpu, #memory, #pulseaudio, #battery {
+    padding: 0 7px;
+    color: #38b6ff;
+}
+
+/* Разделительные линии или акценты при предупреждении */
+#pulseaudio.muted {
+    color: #5c7e8c;
+}
+
+#battery.warning {
+    color: #ffb703;
+}
+
+#battery.critical {
+    color: #ff0055;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #ffffff;
+        background-color: #ff0055;
+    }
+}
+
+#tray {
+    padding-left: 6px;
+    padding-right: 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
