@@ -2,7 +2,7 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "kitty-direct",
-        "source": "/home/axkeya/.config/fastfetch/logo_blue.png",
+        "source": "$HOME/.dotfiles/assets/logo_fastfetch.png",
         "width": 50,
         "height": 8,
         "padding": {
@@ -13,9 +13,9 @@
     },
     "display": {
         "showErrors": false,
-        "separator": " • ",
+        "separator": " ⚡ ",
         "key": {
-            "width": 16
+            "width": 12
         },
         "color": {
             "1": "blue"
@@ -25,54 +25,59 @@
         "break",
         {
             "type": "title",
-            "format": "\u001b[34m[ \u001b[1m{1}\u001b[0m\u001b[38;2;0;168;255m@\u001b[0m\u001b[1m{2} \u001b[0m\u001b[34m]"
+            "format": "\u001b[34m[ \u001b[1;36m{1}\u001b[0m\u001b[38;2;0;168;255m@\u001b[0m\u001b[1;36m{2} \u001b[0m\u001b[34m]"
         },
         {
             "type": "custom",
-            "format": "╭──────────────────────────────────────────────╮",
+            "format": "┌─ System Data ───────────────────────────────┐",
             "outputColor": "blue"
         },
         {
             "type": "os",
-            "key": "  󰍹 OS",
+            "key": "  󰍹 SYS",
             "keyColor": "\u001b[38;2;0;240;255m",
             "format": "{3} {12}"
         },
         {
             "type": "host",
-            "key": "  󰌢 Host",
+            "key": "  󰌢 HST",
             "keyColor": "\u001b[38;2;0;240;255m"
         },
         {
             "type": "kernel",
-            "key": "   Kernel",
+            "key": "   KRN",
             "keyColor": "\u001b[38;2;0;240;255m"
         },
         {
             "type": "uptime",
-            "key": "  󱎫 Uptime",
+            "key": "  󱎫 UPT",
             "keyColor": "\u001b[38;2;0;240;255m"
         },
         {
             "type": "wm",
-            "key": "  󰖲 WM",
+            "key": "  󰖲 ENV",
             "keyColor": "\u001b[38;2;0;168;255m"
         },
         {
             "type": "sound",
-            "key": "  󰓃 Audio",
+            "key": "  󰓃 AUD",
             "keyColor": "\u001b[38;2;0;168;255m",
             "format": "{platform-api} ({volume-percentage})"
         },
         {
             "type": "terminal",
-            "key": "  󰆍 Term",
+            "key": "  󰆍 TRM",
             "keyColor": "\u001b[38;2;0;168;255m"
         },
         {
             "type": "shell",
-            "key": "  󰞷 Shell",
+            "key": "  󰞷 SHL",
             "keyColor": "\u001b[38;2;0;168;255m"
+        },
+        {
+            "type": "custom",
+            "format": "├─ Hardware ──────────────────────────────────┤",
+            "outputColor": "blue"
         },
         {
             "type": "cpu",
@@ -93,18 +98,13 @@
         },
         {
             "type": "disk",
-            "key": "  󰋊 Disk",
+            "key": "  󰋊 DRV",
             "keyColor": "\u001b[38;2;0;85;255m",
             "format": "{size-used} / {size-total} ({size-percentage})"
         },
         {
             "type": "custom",
-            "format": "╰──────────────────────────────────────────────╯",
-            "outputColor": "blue"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[34m[ \u001b[0mPalette \u001b[34m]",
+            "format": "└─────────────────────────────────────────────┘",
             "outputColor": "blue"
         },
         "break",
@@ -112,7 +112,6 @@
             "type": "colors",
             "symbol": "circle"
         },
-        "break",
         "break"
     ]
 }
