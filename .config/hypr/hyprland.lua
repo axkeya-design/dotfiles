@@ -302,7 +302,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal .. " yazi"))
 
 hl.bind(mainMod .. " + G", function()
     hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
-    hl.dispatch(hl.dsp.window.resize({ x = 900, y = 600 }))
+    hl.dispatch(hl.dsp.window.resize({ x = 980, y = 500 }))
 	hl.dispatch(hl.dsp.window.center())
 end)
 
