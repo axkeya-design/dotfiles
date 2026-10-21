@@ -30,7 +30,7 @@ if status is-interactive
 	alias pxzap="proxychains -f ~/.config/proxychains/zap.conf"
 	alias pxburp="proxychains -f ~/.config/proxychains/burp.conf"
 
-	fish_add_path ~/go/bin
+	fish_add_path ~/.local/bin
 
     set -gx EDITOR nvim
     set -gx VISUAL nvim
