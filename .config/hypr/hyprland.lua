@@ -418,6 +418,9 @@ hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("rofimoji --selector rofi --clip
 -- Firefox Bind
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("firefox"))
 
+-- Lock Screen
+hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("hyprlock"))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
