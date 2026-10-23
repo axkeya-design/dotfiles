@@ -61,6 +61,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("blueman-applet")
   hl.exec_cmd("awww-daemon & sleep 0.5 && ~/.config/hypr/scripts/wallpapers.sh loop &")
   hl.exec_cmd("waybar") 
+  hl.exec_cmd("ydotoold")
 
   hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
   hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'")
