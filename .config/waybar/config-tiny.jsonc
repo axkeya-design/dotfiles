@@ -18,6 +18,7 @@
         "cpu",
         "memory",
         "pulseaudio",
+        "hyprland/language",
         "backlight",
         "battery"
     ],
@@ -76,5 +77,11 @@
         "format": "󰁹 {capacity}%",
         "format-charging": "󱐋 {capacity}%",
         "format-plugged": " {capacity}%"
+    },
+
+    "hyprland/language": {
+        "format": "󰌌 {}",
+        "format-en": "EN",
+        "format-ru": "RU",
     }
 }
