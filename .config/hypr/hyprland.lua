@@ -419,7 +419,7 @@ hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("rofimoji --selector rofi --clip
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("firefox"))
 
 -- Lock Screen
-hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Move Workspace
 hl.bind(mainMod .. " + bracketleft",  hl.dsp.focus({ workspace = "e-1" }))
@@ -429,7 +429,7 @@ hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
 local layouts = { "dwindle", "master", "scrolling" }
 local currentLayout = 1
 
-hl.bind(mainMod .. " + ALT + Return", function()
+hl.bind(mainMod .. " + SHIFT + SPACE", function()
     currentLayout = currentLayout % #layouts + 1
     hl.config({ general = { layout = layouts[currentLayout] } })
     hl.dispatch(hl.dsp.exec_cmd("notify-send 'Layout' '" .. layouts[currentLayout] .. "'"))
