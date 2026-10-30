@@ -435,6 +435,19 @@ hl.bind(mainMod .. " + SHIFT + SPACE", function()
     hl.dispatch(hl.dsp.exec_cmd("notify-send 'Layout' '" .. layouts[currentLayout] .. "'"))
 end)
 
+local colFull = false
+
+hl.bind(mainMod .. " + SHIFT + F", function()
+    colFull = not colFull
+    if colFull then
+        hl.dispatch(hl.dsp.layout("fit active"))
+    else
+        hl.dispatch(hl.dsp.layout("colresize 0.5"))
+        hl.dispatch(hl.dsp.focus({ direction = "left" }))
+        hl.dispatch(hl.dsp.focus({ direction = "right" }))
+    end
+end)
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
