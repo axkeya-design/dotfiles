@@ -425,6 +425,16 @@ hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + bracketleft",  hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
 
+-- Cycle Layout
+local layouts = { "dwindle", "master", "scrolling" }
+local currentLayout = 1
+
+hl.bind(mainMod .. " + ALT + Return", function()
+    currentLayout = currentLayout % #layouts + 1
+    hl.config({ general = { layout = layouts[currentLayout] } })
+    hl.dispatch(hl.dsp.exec_cmd("notify-send 'Layout' '" .. layouts[currentLayout] .. "'"))
+end)
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
