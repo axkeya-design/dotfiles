@@ -301,10 +301,15 @@ hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal .. " yazi"))
 
+local gFloating = false
+
 hl.bind(mainMod .. " + G", function()
     hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
-    hl.dispatch(hl.dsp.window.resize({ x = 980, y = 500 }))
-	hl.dispatch(hl.dsp.window.center())
+    gFloating = not gFloating
+    if gFloating then
+        hl.dispatch(hl.dsp.window.resize({ x = 980, y = 500 }))
+        hl.dispatch(hl.dsp.window.center())
+    end
 end)
 
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
