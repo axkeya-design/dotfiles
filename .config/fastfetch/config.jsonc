@@ -13,7 +13,7 @@
     },
     "display": {
         "showErrors": false,
-        "separator": " ⚡ ",
+        "separator": " =>",
         "key": {
             "width": 12
         },
@@ -115,3 +115,4 @@
         "break"
     ]
 }
+
