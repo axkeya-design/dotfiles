@@ -301,12 +301,15 @@ hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal .. " yazi"))
 
-local gFloating = false
-
 hl.bind(mainMod .. " + G", function()
+    local win = hl.get_active_window()
+    if not win then return end
+
+    local wasFloating = win.floating
+
     hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
-    gFloating = not gFloating
-    if gFloating then
+
+    if not wasFloating then
         hl.dispatch(hl.dsp.window.resize({ x = 980, y = 500 }))
         hl.dispatch(hl.dsp.window.center())
     end
