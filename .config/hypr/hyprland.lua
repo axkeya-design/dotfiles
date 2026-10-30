@@ -421,6 +421,10 @@ hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("firefox"))
 -- Lock Screen
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 
+-- Move Workspace
+hl.bind(mainMod .. " + bracketleft",  hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
