@@ -435,7 +435,7 @@ hl.bind(mainMod .. " + bracketright", hl.dsp.focus({ workspace = "e+1" }))
 
 -- Cycle Layout
 local layouts = { "dwindle", "master", "scrolling" }
-local currentLayout = 1
+local currentLayout = 3
 
 hl.bind(mainMod .. " + SHIFT + SPACE", function()
     currentLayout = currentLayout % #layouts + 1
