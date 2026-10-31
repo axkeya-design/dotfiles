@@ -297,7 +297,6 @@ hl.bind(mainMod .. " + SHIFT + Escape", hl.dsp.exec_cmd("command -v hyprshutdown
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Y", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))    
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal .. " yazi"))
 
@@ -314,6 +313,7 @@ hl.bind(mainMod .. " + G", function()
         hl.dispatch(hl.dsp.window.center())
     end
 end)
+
 
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next())
 
@@ -453,6 +453,15 @@ hl.bind(mainMod .. " + SHIFT + F", function()
         hl.dispatch(hl.dsp.layout("colresize 0.5"))
         hl.dispatch(hl.dsp.focus({ direction = "left" }))
         hl.dispatch(hl.dsp.focus({ direction = "right" }))
+    end
+end)
+
+hl.bind(mainMod .. " + V", function()
+    local layout = layouts[currentLayout]
+    if layout == "dwindle" then
+        hl.dispatch(hl.dsp.layout("togglesplit"))
+    elseif layout == "master" then
+        hl.dispatch(hl.dsp.layout("orientationcycle"))
     end
 end)
 
