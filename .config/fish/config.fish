@@ -30,6 +30,10 @@ if status is-interactive
 	alias pxzap="proxychains -f ~/.config/proxychains/zap.conf"
 	alias pxburp="proxychains -f ~/.config/proxychains/burp.conf"
 
+	if test -f "$HOME/.config/fish/pokego_autostart"
+        pokego
+    end
+
     set -gx EDITOR nvim
     set -gx VISUAL nvim
 	set -gx TERM xterm-256color
