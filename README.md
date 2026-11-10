@@ -91,5 +91,5 @@ Fonts required for proper rendering of text, icons, and color emojis across the 
 #### 📥 Installation via pacman
 
 ```bash
-sudo pacman -S ttf-jetbrains-mono-nerd ttf-font-awesome ttf-noto-emoji
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-font-awesome noto-fonts-emoji
 ```
