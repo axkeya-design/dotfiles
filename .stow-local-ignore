@@ -1,6 +1,5 @@
 ^\.git$
 ^\.gitignore$
-^\.gitconfig$
 
 ^assets$
 ^wallpapers$

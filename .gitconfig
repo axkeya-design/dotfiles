@@ -1,13 +1,12 @@
-[user]
-    name = Your Name
-    email = your.email@example.com
+[include]
+    path = ~/.dotfiles/.gitconfig.local
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [color]
-	ui = auto
+    ui = auto
 [core]
-	editor = nvim
+    editor = nvim
 [alias]
     st = status -sb
-	cm = commit -m
-	ps = push
+    cm = commit -m
+    ps = push
