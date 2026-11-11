@@ -163,7 +163,6 @@ hl.layer_rule({
     name       = "rofi-fullscreen-dim-blur",
     match      = { namespace = "^rofi$" },
     dim_around = true,
-    blur       = true,
 })
 
 --------------------------------------------------------------------------------
