@@ -53,7 +53,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
 
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'")
+	hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-mocha-blue-standard+default'")
 end)
 
 --------------------------------------------------------------------------------
