@@ -45,7 +45,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("awww-daemon & sleep 0.5 && ~/.config/hypr/scripts/wallpapers.sh loop &")
     hl.exec_cmd("waybar")
-    hl.exec_cmd("ydotoold")
 
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'")
@@ -409,18 +408,6 @@ hl.bind(mainMod .. " + ALT + L",        hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + B",         hl.dsp.exec_cmd("~/.config/hypr/scripts/wallpapers.sh"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallmenu.sh"))
 hl.bind(mainMod .. " + SPACE",     hl.dsp.exec_cmd("~/.config/waybar/toggle-style.sh"))
-
-
----- Mouse emulation (ydotool) ---------------------------------------------
-
-hl.bind(mainMod .. " + CTRL + H", hl.dsp.exec_cmd("ydotool mousemove -x -" .. mouseStep .. " -y 0"), { repeating = true })
-hl.bind(mainMod .. " + CTRL + J", hl.dsp.exec_cmd("ydotool mousemove -x 0 -y " .. mouseStep),       { repeating = true })
-hl.bind(mainMod .. " + CTRL + K", hl.dsp.exec_cmd("ydotool mousemove -x 0 -y -" .. mouseStep),      { repeating = true })
-hl.bind(mainMod .. " + CTRL + L", hl.dsp.exec_cmd("ydotool mousemove -x " .. mouseStep .. " -y 0"), { repeating = true })
-
-hl.bind(mainMod .. " + CTRL + F", hl.dsp.exec_cmd("ydotool click 0xC0"))
-hl.bind(mainMod .. " + CTRL + D", hl.dsp.exec_cmd("ydotool click 0xC1"))
-
 
 --------------------------------------------------------------------------------
 -- WINDOW RULES
