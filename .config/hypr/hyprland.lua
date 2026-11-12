@@ -242,7 +242,7 @@ hl.bind(mainMod .. " + E",              hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + T",              hl.dsp.exec_cmd(terminal .. " yazi"))
 hl.bind(mainMod .. " + SHIFT + T",      hl.dsp.exec_cmd("cool-retro-term"))
 hl.bind(mainMod .. " + N",              hl.dsp.exec_cmd(terminal .. " -e btop"))
-hl.bind(mainMod .. " + M",              hl.dsp.exec_cmd("amberol"))
+hl.bind(mainMod .. " + M",              hl.dsp.exec_cmd("qmmp"))
 hl.bind(mainMod .. " + period",         hl.dsp.exec_cmd("rofimoji --selector rofi --clipboarder wl-copy --typer wtype"))
 
 ---- Rofi ------------------------------------------------------------------
@@ -472,7 +472,7 @@ hl.window_rule({
 
 hl.window_rule({
     name      = "amberol-workspace",
-    match     = { class = "io.bassi.Amberol" },
+    match     = { class = "qmmp" },
     workspace = 5,
 })
 
