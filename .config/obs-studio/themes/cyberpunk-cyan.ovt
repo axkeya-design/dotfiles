@@ -1,0 +1,35 @@
+@OBSThemeMeta {
+    name:                 'Cyberpunk Cyan Neon Pro';
+    id:                   'com.obsproject.Yami.CyberpunkCyanNeonPro';
+    extends:              'com.obsproject.Yami';
+    author:               'Custom';
+    dark:                 'true';
+}
+
+@OBSThemeVars {
+    --grey1:              #26415c;
+    --grey2:              #1d354c;
+    --grey3:              #15283b;
+    --grey4:              #101f2e;
+    --grey5:              #0b1622;
+    --grey6:              #071018;
+    --grey7:              #040a0f;
+    --grey8:              #020508;
+
+    --white1:             #e2ffff;
+
+    --primary_lighter:    #00f0ff;  
+    --primary_light:      #00d2df; 
+    --primary:            #00a8cc;
+    --primary_dark:       #0077b6;
+    --primary_darker:     #03045e;
+
+    --palette_link:       #00d2df;
+    --palette_linkVisited:#00a8cc;
+
+    --text:               #e2ffff;
+    --text_light:         #e2ffff;
+    --text_muted:         #7092ad;
+    --text_disabled:      var(--text_muted);
+    --text_inactive:      var(--text_muted);
+}
