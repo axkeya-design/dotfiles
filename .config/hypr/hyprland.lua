@@ -397,6 +397,10 @@ hl.bind(mainMod .. " + B",         hl.dsp.exec_cmd("~/.config/hypr/scripts/wallp
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("~/.config/rofi/scripts/wallmenu.sh"))
 hl.bind(mainMod .. " + SPACE",     hl.dsp.exec_cmd("~/.config/waybar/toggle-style.sh"))
 
+---- Input Reload ----------------------------------------------------------
+
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("~/.config/hypr/scripts/fix-touchpad.sh"))
+
 --------------------------------------------------------------------------------
 -- WINDOW RULES
 --------------------------------------------------------------------------------
