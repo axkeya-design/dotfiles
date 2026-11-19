@@ -422,6 +422,14 @@ hl.window_rule({
     no_focus = true,
 })
 
+hl.window_rule({
+    name   = "xdg-portal-gtk",
+    match  = { class = "^(xdg-desktop-portal-gtk)$" },
+    float  = true,
+    center = true,
+    size   = { 800, 600 },
+})
+
 ---- Workspace assignment --------------------------------------------------
 
 -- 2: Browser
