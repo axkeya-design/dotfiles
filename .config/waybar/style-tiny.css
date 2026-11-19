@@ -49,9 +49,13 @@ window#waybar {
     padding: 0 12px;
 }
 
-#cpu, #memory, #pulseaudio, #language, #backlight {
+#cpu, #memory, #temperature, #pulseaudio, #language, #backlight {
     padding: 0 7px;
     color: #38b6ff;
+}
+
+#temperature.critical {
+    color: #ff0055;
 }
 
 #battery {
