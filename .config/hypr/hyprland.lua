@@ -203,19 +203,6 @@ hl.define_submap("scrolloverview", function()
         hl.plugin.scrolloverview.overview("off")
     end, { mouse = true })
 
-	-- mouse focus
-	local overviewActive = false
-
-	hl.on("keybinds.submap", function(name)
-		overviewActive = (name == "scrolloverview")
-	end)
-
-	hl.timer(function()
-		if overviewActive then
-			hl.dispatch(hl.plugin.scrolloverview.window("select"))
-		end
-	end, { timeout = 300, type = "repeat" })
-
 end)
 
 --------------------------------------------------------------------------------
