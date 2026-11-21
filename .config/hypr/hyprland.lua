@@ -45,6 +45,7 @@ hl.config({
 --------------------------------------------------------------------------------
 
 hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("cbatticon")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
     hl.exec_cmd("nm-applet")
@@ -148,6 +149,74 @@ hl.animation({ leaf = "workspaces",    enabled = true,  speed = 4.0, bezier = "w
 hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 4.0, bezier = "workFast" })
 hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 4.0, bezier = "workFast" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 4.0, bezier = "workFast" })
+
+--------------------------------------------------------------------------------
+-- PLUGINS
+--------------------------------------------------------------------------------
+
+-- scrolloverview
+
+local rawBind = hl.bind
+
+hl.bind = function(keys, action, opts)
+    opts = opts or {}
+    if opts.submap_universal == nil then
+        opts.submap_universal = true
+    end
+    return rawBind(keys, action, opts)
+end
+
+hl.config({
+    plugin = {
+        scrolloverview = {
+            scale         = 0.5,
+            workspace_gap = 20,
+            layout        = "vertical",  
+            wallpaper     = 0,          
+        },
+    },
+})
+
+-- show all workspaces
+hl.bind("SUPER + Tab", function()
+    hl.plugin.scrolloverview.overview("toggle")
+end)
+
+-- keybindings
+hl.define_submap("scrolloverview", function()
+    rawBind("h", hl.plugin.scrolloverview.navigate("left"))
+    rawBind("l", hl.plugin.scrolloverview.navigate("right"))
+    rawBind("k", hl.plugin.scrolloverview.navigate("up"))
+    rawBind("j", hl.plugin.scrolloverview.navigate("down"))
+
+	rawBind("return", function()
+		hl.plugin.scrolloverview.overview("select")
+		hl.plugin.scrolloverview.window("select")
+		hl.plugin.scrolloverview.overview("off")
+	end)
+
+    rawBind("escape", hl.plugin.scrolloverview.overview("off"))
+
+    rawBind("mouse:272", function()
+        hl.plugin.scrolloverview.overview("select")
+        hl.plugin.scrolloverview.window("select")
+        hl.plugin.scrolloverview.overview("off")
+    end, { mouse = true })
+
+	-- mouse focus
+	local overviewActive = false
+
+	hl.on("keybinds.submap", function(name)
+		overviewActive = (name == "scrolloverview")
+	end)
+
+	hl.timer(function()
+		if overviewActive then
+			hl.dispatch(hl.plugin.scrolloverview.window("select"))
+		end
+	end, { timeout = 300, type = "repeat" })
+
+end)
 
 --------------------------------------------------------------------------------
 -- LAYERS (rofi)
