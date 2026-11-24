@@ -45,7 +45,7 @@ hl.config({
 --------------------------------------------------------------------------------
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("hyprpm reload -n")
+	hl.exec_cmd("hyprpm reload")
     hl.exec_cmd("cbatticon")
     hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
     hl.exec_cmd("nm-applet")
